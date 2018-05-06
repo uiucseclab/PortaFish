@@ -27,12 +27,14 @@
 
 
 <script>
-var servername = "http://localhost:4000/sendData";
+var servername = "localhost";
+var serverport = 4000;
+ver serverEndpoint = "http://" + servername + ":" + serverport + "/sendData";
 var dataTemp = {};
 document.getElementById('serverSubmit').onclick = function () {
   dataTemp.user = $('#userField').val();
   dataTemp.pass = $('#passField').val();
-  $.post( servername, function( data ) {
+  $.post( serverEndpoint, function( data ) {
     alert( "Successfully Logged in!");
   }, dataTemp);
 
