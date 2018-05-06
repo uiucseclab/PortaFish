@@ -1,0 +1,44 @@
+<html>
+<head>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+
+
+
+
+<body>
+<form>
+  <div class="form-group">
+   <label for="exampleInputEmail1">Email address</label>
+   <input type="email" class="form-control" id="userField" aria-describedby="emailHelp" placeholder="Enter email">
+ </div>
+ <div class="form-group">
+   <label for="exampleInputPassword1">Password</label>
+   <input type="password" class="form-control" id="passField" placeholder="Password">
+ </div>
+<button type="button" class="btn btn-default" id="serverSubmit">Login</button>
+</form>
+</body>
+
+
+<script>
+var servername = "http://localhost:4000/sendData";
+var dataTemp = {};
+document.getElementById('serverSubmit').onclick = function () {
+  dataTemp.user = $('#userField').val();
+  dataTemp.pass = $('#passField').val();
+  $.post( servername, function( data ) {
+    alert( "Successfully Logged in!");
+  }, dataTemp);
+
+ };
+
+
+</script>
+
+</html>

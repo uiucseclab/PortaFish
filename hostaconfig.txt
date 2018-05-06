@@ -1,0 +1,13 @@
+interface=wlan0
+driver=nl80211
+
+hw_mode=g
+channel=6
+wmm_enabled=1
+ht_capab=[HT40][SHORT-GI-20][DSSS_CCK-40]
+ignore_broadcast_ssid=0
+
+# This is the name of the network
+ssid=Rogue Access Point
+# The network passphrase
+wpa_passphrase=
