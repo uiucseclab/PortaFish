@@ -21,6 +21,8 @@ Install Guide Phish Device (raspberry pi)
  - Open `index.html` in client and change the
  - Run `chmod +x start.sh`
  - Run `./start.sh`
+ - Move your custom html page or move `/client/index.html' to `/etc/nodogsplash/htdocs/splash.html`
+ - Make sure your html file or our `index.html` has their servername set to the Server ip address.
 
 
  Install Guide Server (phish destination)
